@@ -13,8 +13,8 @@ if st.button("Classify"):
         mail_tfidf = vectorizer.transform([mail_text])
         prediction = model.predict(mail_tfidf)                
         if prediction[0] == 1:
-            st.error("SPAM.")
+            st.error("SPAM ⚠️")
         else:
-            st.success("HAM.")            
+            st.success("HAM!")            
     else:
         st.warning("Please enter some text to classify.")
