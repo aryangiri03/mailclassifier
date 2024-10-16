@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Spam Classification</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Email Spam Classification</h1>
+        <form action="/predict" method="POST">
+            <div class="form-group">
+                <label for="mail_text">Enter Email Text:</label>
+                <textarea name="mail_text" rows="10" cols="50" required></textarea>
+            </div>
+            <input type="submit" value="Classify">
+        </form>
+    </div>
+</body>
+</html>
